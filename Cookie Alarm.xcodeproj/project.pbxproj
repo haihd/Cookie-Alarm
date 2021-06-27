@@ -13,6 +13,11 @@
 		94E52A912688704A007C97D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E52A902688704A007C97D1 /* Preview Assets.xcassets */; };
 		94E52A9C2688704A007C97D1 /* Cookie_AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E52A9B2688704A007C97D1 /* Cookie_AlarmTests.swift */; };
 		94E52AA72688704A007C97D1 /* Cookie_AlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E52AA62688704A007C97D1 /* Cookie_AlarmUITests.swift */; };
+		94E52AB62688722E007C97D1 /* AlarmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E52AB52688722E007C97D1 /* AlarmListView.swift */; };
+		94E52AB826887291007C97D1 /* MusicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E52AB726887291007C97D1 /* MusicListView.swift */; };
+		94E52ABA2688729C007C97D1 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E52AB92688729C007C97D1 /* SettingView.swift */; };
+		94E52ABD2688733F007C97D1 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E52ABC2688733F007C97D1 /* Alarm.swift */; };
+		94E52ABF268873ED007C97D1 /* AlarmDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E52ABE268873ED007C97D1 /* AlarmDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		94E52AA22688704A007C97D1 /* Cookie AlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cookie AlarmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E52AA62688704A007C97D1 /* Cookie_AlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cookie_AlarmUITests.swift; sourceTree = "<group>"; };
 		94E52AA82688704A007C97D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94E52AB52688722E007C97D1 /* AlarmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListView.swift; sourceTree = "<group>"; };
+		94E52AB726887291007C97D1 /* MusicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListView.swift; sourceTree = "<group>"; };
+		94E52AB92688729C007C97D1 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		94E52ABC2688733F007C97D1 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		94E52ABE268873ED007C97D1 /* AlarmDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +105,8 @@
 		94E52A8826887049007C97D1 /* Cookie Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				94E52A8926887049007C97D1 /* Cookie_AlarmApp.swift */,
-				94E52A8B26887049007C97D1 /* ContentView.swift */,
+				94E52ABB26887331007C97D1 /* Model */,
+				94E52AB42688721B007C97D1 /* View */,
 				94E52A8D2688704A007C97D1 /* Assets.xcassets */,
 				94E52A922688704A007C97D1 /* Info.plist */,
 				94E52A8F2688704A007C97D1 /* Preview Content */,
@@ -128,6 +138,27 @@
 				94E52AA82688704A007C97D1 /* Info.plist */,
 			);
 			path = "Cookie AlarmUITests";
+			sourceTree = "<group>";
+		};
+		94E52AB42688721B007C97D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94E52A8926887049007C97D1 /* Cookie_AlarmApp.swift */,
+				94E52A8B26887049007C97D1 /* ContentView.swift */,
+				94E52AB52688722E007C97D1 /* AlarmListView.swift */,
+				94E52ABE268873ED007C97D1 /* AlarmDetailView.swift */,
+				94E52AB726887291007C97D1 /* MusicListView.swift */,
+				94E52AB92688729C007C97D1 /* SettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94E52ABB26887331007C97D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				94E52ABC2688733F007C97D1 /* Alarm.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E52ABF268873ED007C97D1 /* AlarmDetailView.swift in Sources */,
 				94E52A8C26887049007C97D1 /* ContentView.swift in Sources */,
+				94E52ABA2688729C007C97D1 /* SettingView.swift in Sources */,
+				94E52AB62688722E007C97D1 /* AlarmListView.swift in Sources */,
+				94E52AB826887291007C97D1 /* MusicListView.swift in Sources */,
 				94E52A8A26887049007C97D1 /* Cookie_AlarmApp.swift in Sources */,
+				94E52ABD2688733F007C97D1 /* Alarm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
