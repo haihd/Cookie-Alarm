@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94711CA4268D4C0E0089041D /* AlarmRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94711CA3268D4C0E0089041D /* AlarmRow.swift */; };
+		94711CA6268DA4330089041D /* AlarmRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94711CA5268DA4330089041D /* AlarmRepeatView.swift */; };
+		94711CA8268DA69C0089041D /* AlarmSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94711CA7268DA69C0089041D /* AlarmSoundView.swift */; };
+		94711CAA268DAE130089041D /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94711CA9268DAE130089041D /* Sound.swift */; };
+		94711CAC268DBD0E0089041D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94711CAB268DBD0E0089041D /* Model.swift */; };
 		94E52A8A26887049007C97D1 /* Cookie_AlarmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E52A8926887049007C97D1 /* Cookie_AlarmApp.swift */; };
 		94E52A8C26887049007C97D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E52A8B26887049007C97D1 /* ContentView.swift */; };
 		94E52A8E2688704A007C97D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E52A8D2688704A007C97D1 /* Assets.xcassets */; };
@@ -38,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		94711CA3268D4C0E0089041D /* AlarmRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRow.swift; sourceTree = "<group>"; };
+		94711CA5268DA4330089041D /* AlarmRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRepeatView.swift; sourceTree = "<group>"; };
+		94711CA7268DA69C0089041D /* AlarmSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSoundView.swift; sourceTree = "<group>"; };
+		94711CA9268DAE130089041D /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		94711CAB268DBD0E0089041D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		94E52A8626887049007C97D1 /* Cookie Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cookie Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E52A8926887049007C97D1 /* Cookie_AlarmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cookie_AlarmApp.swift; sourceTree = "<group>"; };
 		94E52A8B26887049007C97D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -149,6 +159,9 @@
 				94E52ABE268873ED007C97D1 /* AlarmDetailView.swift */,
 				94E52AB726887291007C97D1 /* MusicListView.swift */,
 				94E52AB92688729C007C97D1 /* SettingView.swift */,
+				94711CA3268D4C0E0089041D /* AlarmRow.swift */,
+				94711CA5268DA4330089041D /* AlarmRepeatView.swift */,
+				94711CA7268DA69C0089041D /* AlarmSoundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				94E52ABC2688733F007C97D1 /* Alarm.swift */,
+				94711CA9268DAE130089041D /* Sound.swift */,
+				94711CAB268DBD0E0089041D /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,11 +306,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				94E52ABF268873ED007C97D1 /* AlarmDetailView.swift in Sources */,
+				94711CAA268DAE130089041D /* Sound.swift in Sources */,
 				94E52A8C26887049007C97D1 /* ContentView.swift in Sources */,
+				94711CAC268DBD0E0089041D /* Model.swift in Sources */,
+				94711CA8268DA69C0089041D /* AlarmSoundView.swift in Sources */,
 				94E52ABA2688729C007C97D1 /* SettingView.swift in Sources */,
 				94E52AB62688722E007C97D1 /* AlarmListView.swift in Sources */,
 				94E52AB826887291007C97D1 /* MusicListView.swift in Sources */,
 				94E52A8A26887049007C97D1 /* Cookie_AlarmApp.swift in Sources */,
+				94711CA4268D4C0E0089041D /* AlarmRow.swift in Sources */,
+				94711CA6268DA4330089041D /* AlarmRepeatView.swift in Sources */,
 				94E52ABD2688733F007C97D1 /* Alarm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

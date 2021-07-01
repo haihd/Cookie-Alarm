@@ -9,18 +9,46 @@ import SwiftUI
 
 struct AlarmListView: View {
     @Binding var alarms: [Alarm]
+    @State var isPresented: Bool = false
+    @State var newAlarm: Alarm = Alarm()
+    
     var body: some View {
         NavigationView {
             List {
                 ForEach(alarms) { alarm in
-                    NavigationLink(
-                        destination: AlarmDetailView(alarm: binding(for: alarm)),
-                        label: {
-                            Label("Alarm: \(alarm.id)", systemImage: "alarm")
-                        })
+                    NavigationLink(destination: AlarmDetailView(alarm: binding(for: alarm))) {
+                        AlarmRow(alarm: binding(for: alarm))
+                    }
+                }
+                .onDelete(perform: { indexSet in
+                    alarms.remove(atOffsets: indexSet)
+                })
+            }
+            .navigationTitle("Alarm")
+            //.navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(
+//              leading: Button("Edit"){},
+                trailing: Button(action: {
+                    isPresented.toggle()
+                }, label: {
+                    Text("Add")
+                })
+            )
+            .sheet(isPresented: $isPresented) {
+                NavigationView {
+                    AlarmDetailView(alarm: $newAlarm)
+                    .navigationTitle("Add alarm")
+                    .navigationBarItems(leading: Button("Cancel"){
+                        isPresented = false
+                    },
+                    trailing: Button("Done") {
+                        isPresented = false
+                        // Store alarm
+                    })
                 }
             }
         }
+        
     }
     
     private func binding(for alarm: Alarm) -> Binding<Alarm> {

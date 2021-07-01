@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var alarms : [Alarm] = Alarm.data
     var body: some View {
         TabView {
-            AlarmListView(alarms: .constant(Alarm.data))
+            AlarmListView(alarms: $alarms)
                 .tabItem {
-                    Image(systemName: "alarm")
+                    //Image(systemName: "alarm")
+                    Label("Alarm", systemImage: "alarm")
                 }
             MusicListView()
                 .tabItem {
-                    Image(systemName: "moon.zzz")
+                    //Image(systemName: "moon.zzz")
+                    Label("Music", systemImage: "moon.zzz")
                 }
             SettingView()
                 .tabItem {
-                    Image(systemName: "gearshape")
+                    //Image(systemName: "gearshape")
+                    Label("Setting", systemImage: "gearshape")
                 }
         }
         .font(.headline)
