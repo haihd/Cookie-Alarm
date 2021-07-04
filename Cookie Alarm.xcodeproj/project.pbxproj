@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940BFB7B269201520039E222 /* AlarmShowScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940BFB7A269201520039E222 /* AlarmShowScreen.swift */; };
 		94711CA4268D4C0E0089041D /* AlarmRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94711CA3268D4C0E0089041D /* AlarmRow.swift */; };
 		94711CA6268DA4330089041D /* AlarmRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94711CA5268DA4330089041D /* AlarmRepeatView.swift */; };
 		94711CA8268DA69C0089041D /* AlarmSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94711CA7268DA69C0089041D /* AlarmSoundView.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		940BFB7A269201520039E222 /* AlarmShowScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmShowScreen.swift; sourceTree = "<group>"; };
 		94711CA3268D4C0E0089041D /* AlarmRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRow.swift; sourceTree = "<group>"; };
 		94711CA5268DA4330089041D /* AlarmRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRepeatView.swift; sourceTree = "<group>"; };
 		94711CA7268DA69C0089041D /* AlarmSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSoundView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				94711CA3268D4C0E0089041D /* AlarmRow.swift */,
 				94711CA5268DA4330089041D /* AlarmRepeatView.swift */,
 				94711CA7268DA69C0089041D /* AlarmSoundView.swift */,
+				940BFB7A269201520039E222 /* AlarmShowScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				94711CAA268DAE130089041D /* Sound.swift in Sources */,
 				94E52A8C26887049007C97D1 /* ContentView.swift in Sources */,
 				94711CAC268DBD0E0089041D /* Model.swift in Sources */,
+				940BFB7B269201520039E222 /* AlarmShowScreen.swift in Sources */,
 				94711CA8268DA69C0089041D /* AlarmSoundView.swift in Sources */,
 				94E52ABA2688729C007C97D1 /* SettingView.swift in Sources */,
 				94E52AB62688722E007C97D1 /* AlarmListView.swift in Sources */,
