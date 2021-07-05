@@ -17,6 +17,12 @@ struct Alarm: Identifiable {
     var sound: AlarmSound
     var days: Set<AlarmDay>
     
+    var formatedTime : String {
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "hh:mm"
+        return dateFormatterPrint.string(from: self.time)
+    }
+    
     var repeatDays: String {
         get {
             if(days.count == AlarmDay.days.count) {
@@ -52,6 +58,20 @@ struct Alarm: Identifiable {
         self.sound = sound
         self.days = Set<AlarmDay>()
     }
+    
+    func copy() -> Alarm {
+        var copy = Alarm()
+        copy.type = self.type
+        copy.time = self.time
+        copy.status = self.status
+        copy.description = self.description
+        copy.snooze = self.snooze
+        copy.sound = self.sound
+        copy.days = self.days
+        return copy
+    }
+    
+    
 }
 
 extension Alarm {

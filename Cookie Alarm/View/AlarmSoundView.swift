@@ -37,7 +37,7 @@ struct AlarmSoundView: View {
     let sounds: [AlarmSound] = AlarmSound.sounds
     
     var body: some View {
-        NavigationView {
+        VStack {
             List(sounds, selection: $selectedSound){ sound in
                 SoundRow(alarm: $alarm, sound: sound)
             }

@@ -9,18 +9,13 @@ import SwiftUI
 
 struct AlarmRow: View {
     @Binding var alarm: Alarm
-    
-    var formatedTime : String {
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "hh:mm"
-        return dateFormatterPrint.string(from: alarm.time)
-    }
+    @State var showPreview: Bool = false
     
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 HStack {
-                    Text(formatedTime).font(.largeTitle)
+                    Text(alarm.formatedTime).font(.largeTitle)
                     Text("AM").font(.title2)
                 }
                 Text(alarm.description)
@@ -28,11 +23,14 @@ struct AlarmRow: View {
             .foregroundColor(alarm.status ? .black : .gray)
             
             Spacer()
+             
             Toggle(isOn: $alarm.status, label: {
                 Text("Status")
             })
             .labelsHidden()
+            
         }
+        
     }
 }
 

@@ -16,7 +16,7 @@ struct ContentView: View {
                     //Image(systemName: "alarm")
                     Label("Alarm", systemImage: "alarm")
                 }
-            MusicListView()
+            MusicListView(songs: .constant(SleepMusic.allSongs))
                 .tabItem {
                     //Image(systemName: "moon.zzz")
                     Label("Music", systemImage: "moon.zzz")

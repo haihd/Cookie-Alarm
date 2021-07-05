@@ -43,11 +43,16 @@ struct AlarmListView: View {
                     },
                     trailing: Button("Done") {
                         isPresented = false
-                        // Store alarm
+                        var tmpAlarm = newAlarm.copy()
+                        tmpAlarm.id = 10
+                        alarms.append(tmpAlarm)
                     })
                 }
             }
         }
+//        .fullScreenCover(isPresented: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/, content: {
+//            AlarmShowScreen(alarm: $alarms[0])
+//        })
         
     }
     

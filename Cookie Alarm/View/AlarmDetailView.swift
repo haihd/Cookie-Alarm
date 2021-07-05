@@ -23,112 +23,123 @@ struct AlarmDetailView: View {
     
     var body: some View {
         
-        NavigationView {
+        VStack {
             List {
-                HStack {
-                    Text("Time")
-                    Spacer()
-                    DatePicker(selection: $alarm.time, in: ...Date(),
-                    displayedComponents: .hourAndMinute) {
-                        Text("")
-                    }
-                }
-                
-                HStack {
-                    Text("Repeat")
-                    Spacer()
-                    Text(alarm.repeatDays).foregroundColor(.secondary)
-                }
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    tmpAlarm.days = alarm.days
-                    showDayPicker = true
-                }
-                .sheet(isPresented: $showDayPicker) {
-                    NavigationView {
-                        AlarmRepeatView(alarm: $tmpAlarm)
-                        .navigationTitle("Repeat on")
-                        .navigationBarItems(leading: Button("Cancel"){
-                            showDayPicker = false
-                        },
-                        trailing: Button("Done") {
-                            showDayPicker = false
-                            alarm.days = tmpAlarm.days
-                        })
-                    }
-                }
-                
-                // Update label
-                HStack {
-                    Text("Label")
-                    Spacer()
-                    Text(alarm.description).foregroundColor(.secondary)
-                }
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    tmpAlarm.description = alarm.description
-                    showLabelEditor = true
-                }
-                .sheet(isPresented: $showLabelEditor) {
-                    NavigationView {
-                        List {
-                            TextField("Label", text: $tmpAlarm.description)
+                Section {
+                    HStack {
+                        Text("Time")
+                        Spacer()
+                        DatePicker(selection: $alarm.time, in: ...Date(),
+                        displayedComponents: .hourAndMinute) {
+                            Text("")
                         }
-                        .navigationTitle("Alarm label")
-                        .navigationBarItems(leading: Button("Cancel"){
-                            showLabelEditor = false
-                        },
-                        trailing: Button("Done") {
-                            showLabelEditor = false
-                            alarm.description = tmpAlarm.description
-                        })
                     }
-                }
-                
-                // Select sound
-                HStack {
-                    Text("Sound")
-                    Spacer()
-                    Text(alarm.sound.name).foregroundColor(.secondary)
-                }
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    tmpAlarm.sound = alarm.sound
-                    showSoundPicker = true
-                }
-                .sheet(isPresented: $showSoundPicker) {
                     
-                    NavigationView {
-                        AlarmSoundView(alarm: $tmpAlarm)
-                        .navigationTitle("Select sound")
-                        .navigationBarItems(leading: Button("Cancel"){
-                            showSoundPicker = false
-                        },
-                        trailing: Button("Done") {
-                            showSoundPicker = false
-                            alarm.sound = tmpAlarm.sound
+                    HStack {
+                        Text("Repeat")
+                        Spacer()
+                        Text(alarm.repeatDays).foregroundColor(.secondary)
+                    }
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        tmpAlarm.days = alarm.days
+                        showDayPicker = true
+                    }
+                    .sheet(isPresented: $showDayPicker) {
+                        NavigationView {
+                            AlarmRepeatView(alarm: $tmpAlarm)
+                            .navigationTitle("Repeat on")
+                            .navigationBarItems(leading: Button("Cancel"){
+                                showDayPicker = false
+                            },
+                            trailing: Button("Done") {
+                                showDayPicker = false
+                                alarm.days = tmpAlarm.days
+                            })
+                        }
+                    }
+                    
+                    // Update label
+                    HStack {
+                        Text("Label")
+                        Spacer()
+                        Text(alarm.description).foregroundColor(.secondary)
+                    }
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        tmpAlarm.description = alarm.description
+                        showLabelEditor = true
+                    }
+                    .sheet(isPresented: $showLabelEditor) {
+                        NavigationView {
+                            List {
+                                TextField("Label", text: $tmpAlarm.description)
+                            }
+                            .navigationTitle("Alarm label")
+                            .navigationBarItems(leading: Button("Cancel"){
+                                showLabelEditor = false
+                            },
+                            trailing: Button("Done") {
+                                showLabelEditor = false
+                                alarm.description = tmpAlarm.description
+                            })
+                        }
+                    }
+                    
+                    // Select sound
+                    HStack {
+                        Text("Sound")
+                        Spacer()
+                        Text(alarm.sound.name).foregroundColor(.secondary)
+                    }
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        tmpAlarm.sound = alarm.sound
+                        showSoundPicker = true
+                    }
+                    .sheet(isPresented: $showSoundPicker) {
+                        
+                        NavigationView {
+                            AlarmSoundView(alarm: $tmpAlarm)
+                            .navigationTitle("Select sound")
+                            .navigationBarItems(leading: Button("Cancel"){
+                                showSoundPicker = false
+                            },
+                            trailing: Button("Done") {
+                                showSoundPicker = false
+                                alarm.sound = tmpAlarm.sound
+                            })
+                        }
+                    }
+                    
+                    // Snooze
+                    HStack {
+                        Text("Snooze")
+                        Spacer()
+                        Toggle(isOn: $alarm.snooze, label: {
+                            Text("")
                         })
                     }
                 }
-                
-                // Snooze
-                HStack {
-                    Text("Snooze")
-                    Spacer()
-                    Toggle(isOn: $alarm.snooze, label: {
-                        Text("")
-                    })
+               
+                // Show delete if it is edit mode
+                if(alarm.id > 0) {
+                    Section {
+                        // Delete alarm
+                        HStack {
+                            Spacer()
+                            Text("Delete Alarm").foregroundColor(.red)
+                            Spacer()
+                        }
+                    }
                 }
-                
-                // Delete alarm
-                HStack {
-                    Spacer()
-                    Text("Delete Alarm").foregroundColor(.red)
-                    Spacer()
-                }
+               
             }
+           .listStyle(InsetGroupedListStyle())
+            
             
         }
+        
         
     }
 }

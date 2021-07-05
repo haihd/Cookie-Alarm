@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		940BFB7B269201520039E222 /* AlarmShowScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940BFB7A269201520039E222 /* AlarmShowScreen.swift */; };
+		940BFB7D269333EC0039E222 /* meo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 940BFB7C269333EC0039E222 /* meo.mp3 */; };
+		940BFB7F269347460039E222 /* SleepMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940BFB7E269347460039E222 /* SleepMusic.swift */; };
 		94711CA4268D4C0E0089041D /* AlarmRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94711CA3268D4C0E0089041D /* AlarmRow.swift */; };
 		94711CA6268DA4330089041D /* AlarmRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94711CA5268DA4330089041D /* AlarmRepeatView.swift */; };
 		94711CA8268DA69C0089041D /* AlarmSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94711CA7268DA69C0089041D /* AlarmSoundView.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		940BFB7A269201520039E222 /* AlarmShowScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmShowScreen.swift; sourceTree = "<group>"; };
+		940BFB7C269333EC0039E222 /* meo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meo.mp3; sourceTree = "<group>"; };
+		940BFB7E269347460039E222 /* SleepMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepMusic.swift; sourceTree = "<group>"; };
 		94711CA3268D4C0E0089041D /* AlarmRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRow.swift; sourceTree = "<group>"; };
 		94711CA5268DA4330089041D /* AlarmRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRepeatView.swift; sourceTree = "<group>"; };
 		94711CA7268DA69C0089041D /* AlarmSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSoundView.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 				94E52ABB26887331007C97D1 /* Model */,
 				94E52AB42688721B007C97D1 /* View */,
 				94E52A8D2688704A007C97D1 /* Assets.xcassets */,
+				940BFB7C269333EC0039E222 /* meo.mp3 */,
 				94E52A922688704A007C97D1 /* Info.plist */,
 				94E52A8F2688704A007C97D1 /* Preview Content */,
 			);
@@ -175,6 +180,7 @@
 				94E52ABC2688733F007C97D1 /* Alarm.swift */,
 				94711CA9268DAE130089041D /* Sound.swift */,
 				94711CAB268DBD0E0089041D /* Model.swift */,
+				940BFB7E269347460039E222 /* SleepMusic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940BFB7D269333EC0039E222 /* meo.mp3 in Resources */,
 				94E52A912688704A007C97D1 /* Preview Assets.xcassets in Resources */,
 				94E52A8E2688704A007C97D1 /* Assets.xcassets in Resources */,
 			);
@@ -319,6 +326,7 @@
 				94E52AB826887291007C97D1 /* MusicListView.swift in Sources */,
 				94E52A8A26887049007C97D1 /* Cookie_AlarmApp.swift in Sources */,
 				94711CA4268D4C0E0089041D /* AlarmRow.swift in Sources */,
+				940BFB7F269347460039E222 /* SleepMusic.swift in Sources */,
 				94711CA6268DA4330089041D /* AlarmRepeatView.swift in Sources */,
 				94E52ABD2688733F007C97D1 /* Alarm.swift in Sources */,
 			);

@@ -39,7 +39,7 @@ struct AlarmRepeatView: View {
     
     var body: some View {
         
-        NavigationView {
+        VStack {
             List(allDays, selection: $alarm.days){ day in
                 DayRow(alarm: $alarm, day: day)
             }
